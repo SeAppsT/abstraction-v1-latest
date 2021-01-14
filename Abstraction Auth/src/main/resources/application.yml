@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: local
+  application:
+    name: auth
+  cloud:
+    gateway:
+      routes:
+        - id: core
+          url: http://localhost/8081
+
+  main:
+    allow-bean-definition-overriding: true
+token:
+  actiontime: 3600
+  secretkey: seapps

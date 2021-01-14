@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: local
+  jpa:
+    generate-ddl: true
+  application:
+    name: core
+
+server:
+  port: 8080

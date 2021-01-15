@@ -10,10 +10,12 @@ spring:
     gateway:
       routes:
         - id: core
-          url: http://localhost/8081
-
+          uri: http://localhost/8081
+          predicates:
+            - Path=/components/**
   main:
     allow-bean-definition-overriding: true
+
 token:
   actiontime: 3600
   secretkey: seapps
